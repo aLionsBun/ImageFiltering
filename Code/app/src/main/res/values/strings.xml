@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Image filtering</string>
+
+    <!--MainActivity-->
+    <string name="load_question">Where do you want to load image from?</string>
+    <string name="load_gallery">Select from gallery</string>
+    <string name="load_url_hint">Enter image URL here</string>
+    <string name="load_url">Download from URL</string>
+    <string name="load_url_default">Download from default URL</string>
+    <string name="default_url">http://picsum.photos/500</string>
+
+    <!--FilterImage-->
+    <string name="filter_choice">Choose filter to apply</string>
+    <string name="filter_invert">Invert</string>
+    <string name="filter_grayscale">Grayscale</string>
+    <string name="filter_blur">Gaussian blur</string>
+    <string name="filter_sharp">Sharpening</string>
+    <string name="filter_gbr">Switch colors (red to green, green to blue, blue to red)</string>
+    <string name="filter_brg">Switch colors (red to blue, green to red, blue to green)</string>
+    <string name="filter_clear">Clear all filters</string>
+    <string name="filter_save">Save filtered image to device</string>
+
+    <!--General-->
+    <string name="ok">OK</string>
+    <string name="back">Back to previous page</string>
+    <string name="rationale_storage_title">We need access to your storage</string>
+    <string name="rationale_storage_text">In order to process images, we need access
+        to your storage to do these actions:\n1.
+        Load image you want to filter from your gallery;\n2.
+        Save downloaded from URL image to your device so that we could use it;\n3.
+        Save filtered image to storage.\nWe
+        access storage only from this application and do not share access with other apps.
+    </string>
+
+    <!--Toasts-->
+    <string name="invalid_url">Invalid URL</string>
+    <string name="load_gallery_error">Error retrieving image from gallery</string>
+    <string name="load_url_error">Error downloading image from URL</string>
+    <string name="save_success">Successfully saved image</string>
+    <string name="save_error">Error saving image</string>
+</resources>
