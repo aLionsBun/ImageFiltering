@@ -62,8 +62,17 @@ public class FilterImage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter_image);
 
-        //Load image from URI to local storage provided by MainActivity
-        mSourceImageBitmap = loadImage(getIntent().getData());
+        //Check if MainActivity provided us with Intent
+        if(getIntent().getData()==null) {
+            //Load default image (required for testing)
+            mSourceImageBitmap = BitmapFactory
+                    .decodeResource(this.getResources(), R.drawable.ducklings);
+        }
+        else {
+            //Load image from URI provided by MainActivity
+            mSourceImageBitmap = loadImage(getIntent().getData());
+        }
+
         mFilteredImageBitmap=mSourceImageBitmap;
 
         setupViews();
@@ -167,6 +176,7 @@ public class FilterImage extends AppCompatActivity {
         Cursor cursor = getContentResolver().query(imageSource,
                 filePathColumn,null,
                 null, null);
+
         cursor.moveToFirst();
 
         int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
